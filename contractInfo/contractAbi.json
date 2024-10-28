@@ -1,72 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Check Your Balance</title>
-    <link rel="stylesheet" href="styless.css" />
-    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.0/dist/ethers.umd.min.js"></script>
-
-  </head>
-  <body>
-    <header>
-      <h1>Account Balance</h1>
-    </header>
-
-    <main>
-      <section class="balance-section">
-        <h2>Your Current Balance</h2>
-        <p class="currentBalance">FOODY</p>
-        <p id="current-balance">5000</p>
-        <!-- Example balance -->
-
-        <label for="deduct-amount">Enter Amount to Withdraw:</label>
-        <input type="number" id="deduct-amount" class="input-field" />
-        <button id="deduct-button" class="button" onclick="withdraw()">Withdraw</button>
-
-        <p id="message"></p>
-        <!-- This will show messages like "Insufficient funds" -->
-      </section>
-    </main>
-    <script src="balance.js"></script>
-  </body>
-  <script>
-    const claimAmtEle = document.getElementById("deduct-amount");
-    const withdraw = async () => {
-      console.log("hellooo this is withdraw", claimAmtEle.innerText);
-      const clientAddress = localStorage.getItem("clientAddress");
-
-      // fetch("/withdraw", {
-      //   method: "POST",
-      //   headers: {
-      //     "content-type": "application/json",
-      //   },
-      //   body: JSON.stringify({
-      //     clientAddress,
-      //     claimAmt: claimAmtEle.value,
-      //   }),
-      // });
-      const res = await deposit();
-      claimAmtEle.innerText = 0;
-    };
-
-    const deposit = async ()=> {
-
-    const abi = Token.abi;
-    const charge = document.getElementById("deduct-amount").value;
-    console.log(charge,"=========deposit=========");
-    const contractAddress = "0x55cA1a31fDF87F1470F724373FF551af73FA00F1"
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
-
-    const signer = await provider.getSigner();
-    const address = await signer.getAddress();
-    const bounceContract = new ethers.Contract(contractAddress, abi, signer)
-
-    await (await bounceContract.donate(address,"0x94A7Af5edB47c3B91d1B4Ffc2CA535d7aDA8CEDe", ethers.utils.parseUnits(charge.toString(), 18))).wait();
-  
-  }
-
-  const Token = {
+{
     "_format": "hh-sol-artifact-1",
     "contractName": "FoodToken",
     "sourceName": "contracts/FoodToken.sol",
@@ -438,5 +370,3 @@
     "deployedLinkReferences": {}
   }
   
-  </script>
-</html>

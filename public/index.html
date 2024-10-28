@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Tour - Top European Food Destinations</title>
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Corrected import syntax for ethers as an ES module -->
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.0/dist/ethers.umd.min.js"></script>
+
 </head>
+
 <body>
     <!-- Header -->
     <header>
         <div class="logo">
-            <img src="logo.png" alt="Food Tour Logo"></div>
-            <h1>FoodFi</h1>
+            <img src="logo.png" alt="Food Tour Logo">
+        </div>
+        <h1>FoodFi</h1>
         </div>
         <nav>
             <ul>
@@ -22,7 +29,7 @@
         </nav>
         <!-- Connect Wallet Button -->
 
-    <button id="connect-wallet" onclick="connectWallet()">Connect Wallet</button>
+        <button id="connect-wallet" onclick="connectWallet()">Connect Wallet</button>
         <a id="withdraw-wallet" href="balance.html">Withdraw Wallet</a>
     </header>
 
@@ -30,7 +37,8 @@
     <main>
         <section class="introduction">
             <h2>Welcome to Food Tour!</h2>
-            <p>Explore the best food destinations across Europe. Click on a country to discover its top culinary delights.</p>
+            <p>Explore the best food destinations across Europe. Click on a country to discover its top culinary
+                delights.</p>
         </section>
 
         <section class="food-destinations">
@@ -81,16 +89,16 @@
                 </a>
             </div>
         </section>
-        
+
     </main>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Food Tour. All rights reserved.</p>
-        
+
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
-<script src="https://unpkg.com/ethers@5.7.2/dist/ethers.umd.min.js"></script>
-<script src="scripts.js"></script>
 
 </html>
