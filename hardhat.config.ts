@@ -33,6 +33,12 @@ const config: HardhatUserConfig = {
       chainId: 12227332,
       gasPrice: 60000000000,
     },
+    aia: {
+      url: 'https://aia-dataseed1-testnet.aiachain.org',
+      accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+      chainId: 1320,
+      // gasPrice: gasPrice, // Use static gas price for now
+    }
   },
 };
 

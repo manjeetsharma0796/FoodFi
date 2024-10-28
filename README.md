@@ -3,13 +3,14 @@
 yarn install
 npm install
 
-Add this token as manually into your wallet SDU
+Add FOODY token as manually into your wallet
 
-Contract Address = 0x5CCD6fB20fa72584B055Cec288DFf9218284dfbf
+Contract Address = 0x55cA1a31fDF87F1470F724373FF551af73FA00F1
+[Verify HERE](https://testnet.aiascan.com/address/0x55cA1a31fDF87F1470F724373FF551af73FA00F1)
 
 ---
 
-# About Project FoodFi (Build on Opencampus Chain)
+# About Project FoodFi (Build on AIA TESTNET Chain)
 
 - FoodFi: Transforming Culinary Experiences into Digital Assets
 
