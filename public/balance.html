@@ -62,7 +62,7 @@
     const address = await signer.getAddress();
     const bounceContract = new ethers.Contract(contractAddress, abi, signer)
 
-    await (await bounceContract.donate(address,"0x94A7Af5edB47c3B91d1B4Ffc2CA535d7aDA8CEDe", ethers.utils.parseUnits(charge.toString(), 18))).wait();
+    await (await bounceContract.mint(address, ethers.utils.parseUnits(charge.toString(), 18))).wait();
   
   }
 
